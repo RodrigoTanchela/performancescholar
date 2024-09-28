@@ -18,7 +18,7 @@ import com.performancescholar.dto.nota.NotaDTO;
 import com.performancescholar.service.NotaService;
 
 @RestController
-@RequestMapping("/nota")
+@RequestMapping("/atividade")
 public class AtividadeController {
 	@Autowired
 	private NotaService service;

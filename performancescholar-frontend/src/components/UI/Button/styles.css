@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700;900&display=swap');
+
+button{
+    border-radius: 10px;
+    width: 125px;
+    height: 40px;
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    margin: 5px;
+}
+
+.insert{
+    background-color: #22637C;
+    margin-right: 0%;
+}

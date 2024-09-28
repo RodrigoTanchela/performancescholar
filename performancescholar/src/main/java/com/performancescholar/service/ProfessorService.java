@@ -53,8 +53,8 @@ public class ProfessorService {
         entity.setNome(professor.nome());
         entity.setEmail(professor.email());
         entity.setSenha(professor.senha());
-        entity.setPapel(professor.papel());
-        entity.setDataDeCriacao(professor.dataDeCriacao());
+        entity.setTipo(professor.tipo());
+        entity.setDataCriacao(professor.dataCriacao());
         entity.setAtivo(professor.ativo());
         entity.setEspecialidade(professor.especialidade());
 		

@@ -1,0 +1,39 @@
+/* Importando a fonte Inter do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700;900&display=swap');
+
+body{
+    display: grid;
+    grid-template-columns: repeat(5, 3fr); 
+    gap: 16px;
+    margin-left: 50px; 
+}
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Alinha o h1 na parte inferior */
+    align-items: center; /* Centraliza o h1 horizontalmente */
+    border: 1px solid black;
+    width: 300px;
+    height: 180px;
+    background-color: rgb(8, 126, 126);
+    margin: 500px;
+}
+
+.link-card{
+    width: 100%;
+    height: 20%;
+    border-top: 1px solid black;
+    text-align: center;
+    font-size: 35px;
+    font-family: Inter, sans-serif;
+    margin: 0%;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(8, 126, 126);
+}
+
+.imagemTurma{
+    width: 100%;
+    height: 80%;
+}

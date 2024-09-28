@@ -1,0 +1,60 @@
+div .register-container{
+    background-color: rgb(255, 255, 255);
+    padding: 30px 10px 30px 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(0, 0, 0, 0.475);    
+}
+
+.register-container h2{
+    color: black;
+    text-align: center;
+}
+
+.register-container form {
+    background-color: var(--color-light-50);
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 5px, 5px, 8px rgba(0, 0, 0, 0.336);
+    padding: 30px;
+}
+
+.register-container input {
+    width: 300px;
+    height: 30px;
+    margin: 10px;
+    background-color: #ffffff;
+    color: black;
+    border: 2px solid #989393;
+}
+
+.register-container .section{
+    width: 300px;
+    height: 30px;
+    margin: 10px;
+    background-color: #ffffff;
+    color: black;
+    border: 2px solid #989393;
+}
+
+.register-container button{
+    position: relative;
+    height: 40px;
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.radio-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaço entre os itens */
+  }
+
+input.radioTipo{
+    width: 20px;
+    height: 20px;
+}

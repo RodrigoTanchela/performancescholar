@@ -1,6 +1,6 @@
 package com.performancescholar.model;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.Objects;
 
 import com.performancescholar.model.enums.Role;
@@ -30,25 +30,26 @@ public abstract class Usuario {
     private String senha;
     
     @Enumerated(EnumType.STRING)
-    private Role papel;
+    private Role tipo;
     
-    private LocalDateTime dataDeCriacao;
+    @Column(name = "datacriacao", unique = false, nullable = false, length = 255)
+    private LocalDate dataCriacao;
     
-    @Column(name = "enabled")
+    @Column(name = "ativo")
     private Boolean ativo;
     
 	public Usuario() {
 	}
 
-	public Usuario(Long id, String nome, String email, String senha, Role papel, LocalDateTime dataDeCriacao,
+	public Usuario(Long id, String nome, String email, String senha, Role tipo, LocalDate dataCriacao,
 			Boolean ativo) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.email = email;
 		this.senha = senha;
-		this.papel = papel;
-		this.dataDeCriacao = dataDeCriacao;
+		this.tipo = tipo;
+		this.dataCriacao = dataCriacao;
 		this.ativo = ativo;
 	}
 
@@ -84,19 +85,19 @@ public abstract class Usuario {
 		this.senha = senha;
 	}
 	
-	public Role getPapel() {
-		return papel;
+	public Role getTipo() {
+		return tipo;
 	}
-	public void setPapel(Role papel) {
-		this.papel = papel;
-	}
-	
-	public LocalDateTime getDataDeCriacao() {
-		return dataDeCriacao;
+	public void setTipo(Role tipo) {
+		this.tipo = tipo;
 	}
 	
-	public void setDataDeCriacao(LocalDateTime dataDeCriacao) {
-		this.dataDeCriacao = dataDeCriacao;
+	public LocalDate getDataCriacao() {
+		return dataCriacao;
+	}
+	
+	public void setDataCriacao(LocalDate dataCriacao) {
+		this.dataCriacao = dataCriacao;
 	}
 	
 	public Boolean getAtivo() {
@@ -109,7 +110,7 @@ public abstract class Usuario {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(ativo, dataDeCriacao, email, id, nome, papel, senha);
+		return Objects.hash(ativo, dataCriacao, email, id, nome, tipo, senha);
 	}
 
 	@Override
@@ -121,9 +122,9 @@ public abstract class Usuario {
 		if (getClass() != obj.getClass())
 			return false;
 		Usuario other = (Usuario) obj;
-		return Objects.equals(ativo, other.ativo) && Objects.equals(dataDeCriacao, other.dataDeCriacao)
+		return Objects.equals(ativo, other.ativo) && Objects.equals(dataCriacao, other.dataCriacao)
 				&& Objects.equals(email, other.email) && Objects.equals(id, other.id)
-				&& Objects.equals(nome, other.nome) && papel == other.papel && Objects.equals(senha, other.senha);
+				&& Objects.equals(nome, other.nome) && tipo == other.tipo && Objects.equals(senha, other.senha);
 	}
 	
 	

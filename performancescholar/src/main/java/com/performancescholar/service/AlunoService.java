@@ -40,6 +40,7 @@ public class AlunoService {
 		//if(aluno == null) throw new RequiredObjectIsNullException();
 		logger.info("Creating one aluno!");
 		var entity = AlunoMapper.convertToModel(aluno);
+		entity.setMatricula(entity.generateMatricula());
 		var vo = AlunoMapper.convertToDto(alunoRepository.save(entity));
 		return vo;
 	}
@@ -53,8 +54,8 @@ public class AlunoService {
         entity.setNome(aluno.nome());
         entity.setEmail(aluno.email());
         entity.setSenha(aluno.senha());
-        entity.setPapel(aluno.papel());
-        entity.setDataDeCriacao(aluno.dataDeCriacao());
+        entity.setTipo(aluno.tipo());
+        entity.setDataCriacao(aluno.dataCriacao());
         entity.setAtivo(aluno.ativo());
         entity.setMatricula(aluno.matricula());
 		

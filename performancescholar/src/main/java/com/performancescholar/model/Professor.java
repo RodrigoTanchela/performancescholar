@@ -1,6 +1,6 @@
 package com.performancescholar.model;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.Objects;
 
 import com.performancescholar.model.enums.Role;
@@ -14,9 +14,9 @@ public class Professor extends Usuario {
 	
 	private String especialidade;
 
-	public Professor(Long id, String nome, String email, String senha, Role papel, LocalDateTime dataDeCriacao,
+	public Professor(Long id, String nome, String email, String senha, Role papel, LocalDate dataCriacao,
 			Boolean ativo, String especialidade) {
-		super(id, nome, email, senha, papel, dataDeCriacao, ativo);
+		super(id, nome, email, senha, papel, dataCriacao, ativo);
 		this.especialidade = especialidade;
 	}
 

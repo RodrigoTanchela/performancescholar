@@ -53,8 +53,8 @@ public class AdministradorService {
         entity.setNome(administrador.nome());
         entity.setEmail(administrador.email());
         entity.setSenha(administrador.senha());
-        entity.setPapel(administrador.papel());
-        entity.setDataDeCriacao(administrador.dataDeCriacao());
+        entity.setTipo(administrador.tipo());
+        entity.setDataCriacao(administrador.dataCriacao());
         entity.setAtivo(administrador.ativo());
 		
 		var vo = AdministradorMapper.convertToDto(administradorRepository.save(entity));

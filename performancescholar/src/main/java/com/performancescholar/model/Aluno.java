@@ -1,7 +1,8 @@
 package com.performancescholar.model;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.Objects;
+import java.util.UUID;
 
 import com.performancescholar.model.enums.Role;
 
@@ -19,9 +20,9 @@ public class Aluno extends Usuario {
 	public Aluno() {
 	}
 
-	public Aluno(Long id, String nome, String email, String senha, Role papel, LocalDateTime dataDeCriacao,
+	public Aluno(Long id, String nome, String email, String senha, Role papel, LocalDate dataCriacao,
 			Boolean ativo, String matricula) {
-		super(id, nome, email, senha, papel, dataDeCriacao, ativo);
+		super(id, nome, email, senha, papel, dataCriacao, ativo);
 		this.matricula = matricula;
 	}
 
@@ -31,6 +32,10 @@ public class Aluno extends Usuario {
 
 	public void setMatricula(String matricula) {
 		this.matricula = matricula;
+	}
+	
+	public String generateMatricula() {
+		return UUID.randomUUID().toString().substring(0, 11);
 	}
 
 	@Override

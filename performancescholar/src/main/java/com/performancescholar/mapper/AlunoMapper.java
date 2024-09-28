@@ -7,8 +7,8 @@ import com.performancescholar.model.Aluno;
 public class AlunoMapper {
 	
 	public static AlunoResponseDTO convertToDto(Aluno aluno) {
-		AlunoResponseDTO alunoDto = new AlunoResponseDTO(aluno.getNome(), aluno.getEmail(), aluno.getPapel(), 
-				aluno.getDataDeCriacao(), aluno.getAtivo(), aluno.getMatricula());
+		AlunoResponseDTO alunoDto = new AlunoResponseDTO(aluno.getNome(), aluno.getEmail(), aluno.getTipo(), 
+				aluno.getDataCriacao(), aluno.getAtivo(), aluno.getMatricula());
 		return alunoDto;
 	}
 	
@@ -22,8 +22,8 @@ public class AlunoMapper {
 	        entity.setNome(alunoDto.nome());
 	        entity.setEmail(alunoDto.email());
 	        entity.setSenha(alunoDto.senha());
-	        entity.setPapel(alunoDto.papel());
-	        entity.setDataDeCriacao(alunoDto.dataDeCriacao());
+	        entity.setTipo(alunoDto.tipo());
+	        entity.setDataCriacao(alunoDto.dataCriacao());
 	        entity.setAtivo(alunoDto.ativo());
 	        entity.setMatricula(alunoDto.matricula());
 			

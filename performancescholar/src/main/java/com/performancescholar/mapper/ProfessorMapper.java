@@ -7,8 +7,8 @@ import com.performancescholar.model.Professor;
 public class ProfessorMapper {
 	
 	public static ProfessorResponseDTO convertToDto(Professor professor) {
-		ProfessorResponseDTO professorDto = new ProfessorResponseDTO(professor.getNome(), professor.getEmail(), professor.getPapel(), 
-				professor.getDataDeCriacao(), professor.getAtivo(), professor.getEspecialidade());
+		ProfessorResponseDTO professorDto = new ProfessorResponseDTO(professor.getNome(), professor.getEmail(), professor.getTipo(), 
+				professor.getDataCriacao(), professor.getAtivo(), professor.getEspecialidade());
 		return professorDto;
 	}
 	
@@ -22,8 +22,8 @@ public class ProfessorMapper {
 	        entity.setNome(professorDto.nome());
 	        entity.setEmail(professorDto.email());
 	        entity.setSenha(professorDto.senha());
-	        entity.setPapel(professorDto.papel());
-	        entity.setDataDeCriacao(professorDto.dataDeCriacao());
+	        entity.setTipo(professorDto.tipo());
+	        entity.setDataCriacao(professorDto.dataCriacao());
 	        entity.setAtivo(professorDto.ativo());
 	        entity.setEspecialidade(professorDto.especialidade());
 			
