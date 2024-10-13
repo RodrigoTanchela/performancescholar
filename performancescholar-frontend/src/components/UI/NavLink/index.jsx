@@ -2,9 +2,9 @@ import P from 'prop-types';
 import { MenuLink } from '../MenuLink';
 import './styles.css'
 
-export const NavLinks = ({ links = [] }) => {
+export const NavLinks = ({ links = [], classLink="nav-link" } ) => {
   return (
-    <nav className = "container-link">
+    <nav className = {classLink}>
       {links.map((link) => (
         <MenuLink key={link.link} {...link} />
       ))}
@@ -20,4 +20,5 @@ NavLinks.propTypes = {
       newTab: P.bool,
     }),
   ),
+
 };

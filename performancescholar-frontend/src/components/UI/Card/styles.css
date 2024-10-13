@@ -11,8 +11,7 @@ body{
 .card-container{
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Alinha o h1 na parte inferior */
-    align-items: center; /* Centraliza o h1 horizontalmente */
+    justify-content: flex-end; 
     border: 1px solid black;
     width: 300px;
     height: 180px;

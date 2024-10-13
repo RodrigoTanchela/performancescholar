@@ -1,0 +1,21 @@
+.tabela-alunos {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .tabela-alunos th,
+  .tabela-alunos td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  /* Aplicar listras */
+  .tabela-alunos tbody tr:nth-child(odd) {
+    background-color: #cce5ff; /* Azul claro */
+  }
+  
+  .tabela-alunos tbody tr:nth-child(even) {
+    background-color: #99ccff; /* Azul mais escuro */
+  }
+  

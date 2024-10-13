@@ -1,0 +1,30 @@
+footer {
+    bottom: 0px;
+}
+
+.links-relatorio {
+    position: relative;
+    top: 100px;
+    width: 100%;
+    height: 70px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links-relatorio .menu-link {
+    background-color: #1CD031;
+    color: #ffff;
+    width: 300px;
+    height: 50px;
+    border-radius: 7px;
+    padding-top: 10px;
+    font-size: 25px;
+    margin: 10px;
+    text-align: center;
+}
+
+.links-relatorio .menu-link:hover{
+    border-bottom: none;
+}
