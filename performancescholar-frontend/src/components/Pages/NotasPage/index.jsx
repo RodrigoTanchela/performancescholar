@@ -6,16 +6,15 @@ import './styles.css';
 import { useNotaData } from '../../../hooks/nota/useNotaData';
 
 export const NotasPage = () => {
-  const { data: notaData, isLoading, error } = useNotaData(1);
+  const { data: notaData, isLoading, error } = useNotaData(3);
 
   if (isLoading) return <p>Carregando...</p>;
   if (error) return <p>Erro: {error.message}</p>;
 
-  // Verifique se notaData é um array
   const dadosParaTabela = Array.isArray(notaData) ? notaData.map(nota => ({
     id: nota.id,
     nome: nota.alunoNome,
-    notas: [nota.valor],  // Adicionando apenas a nota obtida
+    notas: [nota.valor],  
     atividade: nota.atividadeTitulo,
   })) : [];
 
