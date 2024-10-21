@@ -1,16 +1,17 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
+
 const fetchNotaDataById = async ({ queryKey }) => {
-  const [, id] = queryKey;
-  const response = await axios.get(`http://localhost:8080/nota/buscarNotasAlunos/${id}`);
+  const [, id] = queryKey; // Extrai o ID do queryKey
+  const response = await axios.get(`http://localhost:8080/nota/buscarNotasAlunosId/${id}`);
   return response.data;
 };
 
-export const useNotaData = (id) => {
+export const useNotaAlunoData = (id) => {
   return useQuery({
     queryKey: ['notaData', id],
     queryFn: fetchNotaDataById,
-    enabled: !!id,
+    enabled: !!id, 
   });
 };

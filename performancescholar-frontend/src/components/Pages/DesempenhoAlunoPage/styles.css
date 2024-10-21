@@ -1,0 +1,12 @@
+.grafico {
+    margin-top: 100px;
+    margin-left: 20px;
+    background-color: #FFFFFF;
+    padding: 16px;
+    align-items: center;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.desempenhoPage footer{
+    position: absolute;
+}

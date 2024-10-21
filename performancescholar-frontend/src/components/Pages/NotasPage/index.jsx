@@ -1,12 +1,13 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Footer } from "../../Layout/Footer";
 import { Heading } from "../../Layout/Heading";
 import { Table } from '../../UI/Table';
 import './styles.css';
 import { useNotaData } from '../../../hooks/nota/useNotaData';
+import Cookies from 'js-cookie'
 
 export const NotasPage = () => {
-  const { data: notaData, isLoading, error } = useNotaData(3);
+  const userId = Cookies.get('id');
+  const { data: notaData, isLoading, error } = useNotaData(userId);
 
   if (isLoading) return <p>Carregando...</p>;
   if (error) return <p>Erro: {error.message}</p>;

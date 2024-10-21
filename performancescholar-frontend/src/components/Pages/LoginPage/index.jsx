@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Input from "../../UI/Input/index.jsx"; // Verifique se o caminho está correto
 import { useLoginUser } from '../../../hooks/user/useLoginUser.js';
 import { Messagem } from '../../Layout/Messagem/index.jsx';
+import Cookies from 'js-cookie'
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -25,9 +26,9 @@ const Login = () => {
         const token = data.token;
         const email = data.email
         const id = data.id
-        localStorage.setItem('id', id);
-        localStorage.setItem('email', email);
-        localStorage.setItem('token', token);
+        Cookies.set('id', id);
+        Cookies.set('email', email);
+        Cookies.set('token', token);
         navigate('/turmaPage');
       },
       onError: () => {

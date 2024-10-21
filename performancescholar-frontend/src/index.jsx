@@ -4,13 +4,16 @@ import './styles/global-styles.css';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { BrowserRouter } from 'react-router-dom';
 import App from './templates/App.jsx';
+import { DesempenhoAlunoPage } from './components/Pages/DesempenhoAlunoPage/index.jsx';
+
 
 const queryClient = new QueryClient();
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
+      <QueryClientProvider client={queryClient}>
+      {/* <DesempenhoAlunoPage /> */}
+ <BrowserRouter>
         <App />
       </BrowserRouter>
     </QueryClientProvider>
