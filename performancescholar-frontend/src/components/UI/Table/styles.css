@@ -1,0 +1,43 @@
+.tabela form {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+.tabela-alunos{
+    width: 100%;
+}
+  
+.tabela-alunos th,
+.tabela-alunos td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+  
+.tabela-alunos tbody tr:nth-child(odd) {
+  background-color: #b0cff1; /* Azul claro */
+}
+  
+.tabela-alunos tbody tr:nth-child(even) {
+  background-color: #6490bf; /* Azul mais escuro */
+}
+
+input {
+  border: none;
+  background-color: transparent;
+  text-align: center;
+}
+
+.btn-secondary{
+    position: relative;
+    margin-top: 20px;
+    height: 40px;
+    width: 200px;
+    color: #ffffff;
+    border: none;
+    background-color: #4681C1;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    cursor: pointer;
+}

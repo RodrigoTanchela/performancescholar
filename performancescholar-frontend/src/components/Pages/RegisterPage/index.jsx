@@ -3,6 +3,7 @@ import './styles.css';
 import Input from "../../UI/Input/index.jsx";
 import { Messagem } from "../../Layout/Messagem/index.jsx";
 import { useCreateUser } from '../../../hooks/user/useCreateUser.js';
+import { useNavigate } from 'react-router-dom';
 
 const RegisterPage = () => {
   const [nome, setNome] = useState('');
@@ -13,6 +14,7 @@ const RegisterPage = () => {
   const [ativo, setAtivo] = useState(true); 
   const [especialidade, setEspecialidade] = useState('');
   const { mutate, isSuccess, isLoading } = useCreateUser();
+  const navigate = useNavigate();
 
 
   const handleSubmit = (e) => {
@@ -31,8 +33,7 @@ const RegisterPage = () => {
     mutate(userData)
     
     setTimeout(() => {
-      console.log("Recarregando a página após o tempo de espera...");
-      window.location.reload(); 
+      navigate('/'); 
     }, 2000); 
   };
 

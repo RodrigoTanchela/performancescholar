@@ -1,37 +1,29 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './styles.css'
 import { NavLinks } from '../../UI/NavLink';
+import './styles.css';
+
 const linksData = [
   {
     children: 'Home',
-    link: '/home',
+    link: '/turmaPage',
     newTab: false,
   },
   {
     children: 'About',
-    link: '/about',
+    link: 'https://github.com/RodrigoTanchela',
     newTab: false,
   },
   {
     children: 'Contact',
-    link: '/contact',
-    newTab: true, // Este link abrirá em uma nova aba
+    link: 'https://www.instagram.com/rodrigo_martinez_tanchela/',
+    newTab: true,
   },
 ];
-
-
 
 export const Heading = () => {
   return (
     <header className="heading-container">
-      <img className="logo" src="/../../../src/assets/imagens/Performance scholar.png" alt="logo marca"></img>
-      <Router>
-      <NavLinks className="links" links={linksData} /> {}
-      <Routes>
-        {}
-      </Routes>
-    </Router>   
+      <img className="logo" src="/../../../src/assets/imagens/Performance scholar.png" alt="logo marca" />
+      <NavLinks className="links" links={linksData} />
     </header>
   );
 };
-

@@ -1,18 +1,18 @@
 footer {
     position: absolute;
-    left: 0;
-    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    width: 101%;
     height: 100px;
-    overflow-x: hidden; /* Evita a barra de rolagem horizontal */
+    overflow-x: hidden; 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    gap: 0px 0px;
-    grid-template-areas:
-      "TextoCopyright LogoRodape .";
+    grid-template-areas: "TextoCopyright LogoRodape .";
     align-items: center;
-    padding: 1rem 2rem;
     background-color: #282829;
+    border: 1px solid #282829;
+    margin: 0px -10px -8px -7.5px;
   }
   
   .TextoCopyright {
